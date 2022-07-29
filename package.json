@@ -13,11 +13,14 @@
 =======
         "build": "webpack --config webpack.config.js",
         "deploy": "gh-pages -d build"
+<<<<<<< HEAD
 >>>>>>> 9f696c1 (chore: add gh-pages)
 =======
         "predeploy": "webpack --config webpack.config.js",
         "deploy": "gh-pages -d dist"
 >>>>>>> 1a1ec0c (depoly: depoly demo page(gh-pages))
+=======
+>>>>>>> 9f696c1 (chore: add gh-pages)
     },
     "author": "",
     "license": "ISC",
