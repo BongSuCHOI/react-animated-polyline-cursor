@@ -7,12 +7,17 @@
     "scripts": {
         "dev": "webpack serve --open",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "predeploy": "webpack --config webpack.config.js",
         "deploy": "gh-pages -d dist"
 =======
         "build": "webpack --config webpack.config.js",
         "deploy": "gh-pages -d build"
 >>>>>>> 9f696c1 (chore: add gh-pages)
+=======
+        "predeploy": "webpack --config webpack.config.js",
+        "deploy": "gh-pages -d dist"
+>>>>>>> 1a1ec0c (depoly: depoly demo page(gh-pages))
     },
     "author": "",
     "license": "ISC",
