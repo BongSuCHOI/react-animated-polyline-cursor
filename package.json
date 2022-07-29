@@ -21,8 +21,12 @@
         "vite-tsconfig-paths": "^4.2.0"
     },
     "dependencies": {
+<<<<<<< HEAD
         "@types/react": "^18.2.21",
         "@types/react-dom": "^18.2.7",
+=======
+        "prop-types": "^15.8.1",
+>>>>>>> 8381304 (chore: add PropTypes)
         "react": "^18.2.0",
         "react-dom": "^18.2.0"
     }
