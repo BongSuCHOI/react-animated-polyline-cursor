@@ -1,4 +1,4 @@
-# React Custom Animated Cursor
+# React Animated Polyline Cursor
 
 기본 커서를 커스텀 가능한 애니메이션 커서로 변경해주는 React Component입니다.
 해당 Component는 함수형으로 제작되었습니다.
