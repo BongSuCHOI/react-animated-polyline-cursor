@@ -28,7 +28,7 @@
 
 ## Demo
 
-[Live Demo](https://bongsuchoi.github.io/react-custom-animated-cursor/)
+[Live Demo](https://bongsuchoi.github.io/react-animated-polyline-cursor/)
 
 <br/>
 
