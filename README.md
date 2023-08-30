@@ -100,6 +100,13 @@ export default function App() {
 
 <br/>
 
+## Todos
+
+-   Webpack to Vite Migration
+-   Source Refactoring
+
+<br/>
+
 ## Notes
 
 -   [DFY](https://www.dfy.co.kr/)의 커서를 React 버전으로 만들어보고 싶어서 [react-animated-cursor](https://github.com/stephenscaff/react-animated-cursor)와 [DFY](https://www.dfy.co.kr/)를 참고하여 제작하였습니다.
