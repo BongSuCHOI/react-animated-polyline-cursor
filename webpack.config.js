@@ -7,13 +7,13 @@ const TerserPlugin = require("terser-webpack-plugin");
 module.exports = {
     mode: "development",
 
-    entry: "./demo/src/index.js",
+    entry: "./demo/src/index.tsx",
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "index[contenthash].js",
+        filename: "index-[hash].js",
     },
     resolve: {
-        extensions: [".js", ".jsx"],
+        extensions: [".js", ".jsx", ".ts", ".tsx"],
     },
     plugins: [
         new CleanWebpackPlugin(),
@@ -32,7 +32,7 @@ module.exports = {
         ],
         splitChunks: {
             name: "vendor",
-            filename: "./[contenthash].js",
+            filename: "./vendor-[hash].js",
             chunks: "all",
         },
     },
@@ -43,16 +43,21 @@ module.exports = {
                 use: [MiniCssExtractPlugin.loader, "css-loader"],
             },
             {
-                test: /\.m?js$/,
-                exclude: /(node_modules|bower_components)/,
-                use: {
-                    loader: "babel-loader",
-                    options: {
-                        presets: ["@babel/preset-env"],
-                        plugins: ["@babel/plugin-transform-runtime"],
-                    },
-                },
+                test: /\.(t|j)sx?$/,
+                use: { loader: "ts-loader" },
+                exclude: /node_modules/,
             },
+            // {
+            //     test: /\.m?js$/,
+            //     exclude: /(node_modules|bower_components)/,
+            //     use: {
+            //         loader: "babel-loader",
+            //         options: {
+            //             presets: ["@babel/preset-env"],
+            //             plugins: ["@babel/plugin-transform-runtime"],
+            //         },
+            //     },
+            // },
         ],
     },
 };
