@@ -2,8 +2,6 @@ import React from "react";
 import styled from "./DemoContent.module.css";
 
 export default function DemoContent() {
-    document.body.style.margin = 0;
-
     return (
         <div className={styled.wrap}>
             <div className={styled.con}>

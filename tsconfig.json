@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "outDir": ".docs/",
+        "sourceMap": true,
+        "strictNullChecks": true,
+        "module": "es6",
+        "jsx": "react",
+        "target": "es5",
+        "allowJs": true,
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "plugins": [{ "name": "typescript-plugin-css-modules" }]
+    },
+    "include": ["./lib/", "lib/globals.d.ts"]
+}
