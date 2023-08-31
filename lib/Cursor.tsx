@@ -11,7 +11,7 @@ import type {
     getCoordinatesProps,
     getCoordinatesResult,
     cursorStyleType,
-} from "./types/CursorTypes";
+} from "./types/Cursor.types";
 
 const Cursor = ({
     dotColor,
