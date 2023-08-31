@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "./DemoContent.module.css";
+import styled from "@src/DemoContent.module.css";
 
 export default function DemoContent() {
     return (

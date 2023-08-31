@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState, useMemo } from "react";
-import styled from "./Cursor.module.css";
+import styled from "@lib/Cursor.module.css";
 
 import type {
     CursorTypes,
@@ -11,7 +11,7 @@ import type {
     getCoordinatesProps,
     getCoordinatesResult,
     cursorStyleType,
-} from "./types/Cursor.types";
+} from "@lib/types/Cursor.types";
 
 const Cursor = ({
     dotColor,
