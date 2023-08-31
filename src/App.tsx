@@ -1,6 +1,6 @@
 import React from "react";
-import CustomAnimatedCursor from "../../lib";
-import DemoContent from "./DemoContent";
+import CustomAnimatedCursor from "@lib/index";
+import DemoContent from "@src/DemoContent";
 
 export default function App() {
     return (

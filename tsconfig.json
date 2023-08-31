@@ -1,15 +1,20 @@
 {
     "compilerOptions": {
-        "outDir": ".docs/",
-        "sourceMap": true,
-        "strictNullChecks": true,
+        "target": "es5",
         "module": "es6",
         "jsx": "react",
-        "target": "es5",
         "allowJs": true,
+        "outDir": "./docs",
+        "isolatedModules": true,
+        "strictNullChecks": true,
         "esModuleInterop": true,
         "moduleResolution": "node",
-        "plugins": [{ "name": "typescript-plugin-css-modules" }]
+        "plugins": [{ "name": "typescript-plugin-css-modules" }],
+        "baseUrl": "./",
+        "paths": {
+            "@src/*": ["src/*"],
+            "@lib/*": ["lib/*"]
+        }
     },
-    "include": ["./lib/", "lib/globals.d.ts"]
+    "include": ["./lib/", "./src/", "globals.d.ts"]
 }
