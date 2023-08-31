@@ -8,11 +8,11 @@
 
 ## Contents
 
-1. [Features](##-features)
-2. [Demo](##-demo)
-3. [Start](##-start)
-4. [Options](##-options)
-5. [Notes](##-notes)
+1. [Features](#features)
+2. [Demo](#demo)
+3. [Start](#start)
+4. [Options](#options)
+5. [Notes](#notes)
 
 <br/>
 
@@ -102,12 +102,15 @@ export default function App() {
 
 ## Todos
 
--   Webpack to Vite Migration
+-   ~~Webpack to Vite Migration~~
+-   Add Hovered Marker Click Action
+-   Add Input Type Element Hovered Action
+-   Create & Deploy NPM Package
 -   Source Refactoring
 
 <br/>
 
 ## Notes
 
--   [DFY](https://www.dfy.co.kr/)의 커서를 React 버전으로 만들어보고 싶어서 [react-animated-cursor](https://github.com/stephenscaff/react-animated-cursor)와 [DFY](https://www.dfy.co.kr/)를 참고하여 제작하였습니다.
+-   Vue로 구현되어있는 [DFY](https://www.dfy.co.kr/)의 커서를 React 버전으로 만들어보고 싶어서 제작하였습니다.
 -   버그, 이슈, 리팩토링 등 다양한 피드백 환영합니다.
