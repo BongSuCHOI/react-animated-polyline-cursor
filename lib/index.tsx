@@ -2,7 +2,7 @@ import React from "react";
 import Cursor from "./Cursor";
 import DeviceCheck from "./util/deviceCheck";
 
-import type { CursorTypes } from "./types/CursorTypes";
+import type { CursorTypes } from "./types/Cursor.types";
 
 // render
 const CustomAnimatedCursor = ({

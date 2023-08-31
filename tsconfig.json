@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "outDir": ".docs/",
+        "outDir": "./docs/",
         "sourceMap": true,
         "strictNullChecks": true,
         "module": "es6",
@@ -11,5 +11,5 @@
         "moduleResolution": "node",
         "plugins": [{ "name": "typescript-plugin-css-modules" }]
     },
-    "include": ["./lib/", "lib/globals.d.ts"]
+    "include": ["./lib/", "globals.d.ts"]
 }

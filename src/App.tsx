@@ -1,5 +1,5 @@
 import React from "react";
-import CustomAnimatedCursor from "../../lib";
+import CustomAnimatedCursor from "../lib";
 import DemoContent from "./DemoContent";
 
 export default function App() {
