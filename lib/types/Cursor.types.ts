@@ -29,27 +29,53 @@ export interface handleMouseEventsProps {
     setIsHovered: React.Dispatch<React.SetStateAction<mouseStateBoolean>>;
 }
 
-export interface getCoordinatesProps {
-    mouseXY: mouseCoordinates;
-    lineDelay: number;
-    dotReductionRatio: number;
-}
-
-export interface getCoordinatesResult {
+export interface historyCoordinates {
     historyX: number;
     historyY: number;
-    cursorScale: number;
+    dist: number;
+    scale: number;
 }
 
+export type getCursorStyleProps = {
+    dotColor: string;
+    lineColor: string;
+    lineWidth: number;
+    markerColor: string;
+    markerBlendMode: boolean;
+};
 export interface cursorStyleType {
+    customCursorWrap: {
+        zIndex: number;
+        position: "relative";
+        height: number;
+        mixBlendMode: "difference" | "normal";
+    };
+    cursorSvg: {
+        zIndex: number;
+        opacity: number;
+        position: "fixed";
+        left: number;
+        top: number;
+        width: string;
+        height: string;
+        pointerEvents: "none";
+        transition: string;
+    };
     circle: {
         fill: string;
+        transition: string;
     };
     polyline: {
         stroke: string;
         strokeWidth: number;
+        fill: string;
+        transition: string;
     };
     markerCircle: {
         fill: string;
+        zIndex: number;
+        opacity: number;
+        transition: string;
+        r: number;
     };
 }
