@@ -12,6 +12,7 @@ export interface CursorTypes {
     lineDelay: number;
     lineLength: number;
     lineWidth: number;
+    markerSize: number;
     markerColor: string;
     removeCursorElements: removeCursor;
     markerBlendMode: mouseStateBoolean;

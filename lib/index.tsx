@@ -13,6 +13,7 @@ const CustomAnimatedCursor = ({
     lineDelay,
     lineLength,
     lineWidth,
+    markerSize,
     markerColor,
     removeCursorElements,
     markerBlendMode,
@@ -29,6 +30,7 @@ const CustomAnimatedCursor = ({
             lineDelay={lineDelay}
             lineLength={lineLength}
             lineWidth={lineWidth}
+            markerSize={markerSize}
             markerColor={markerColor}
             removeCursorElements={removeCursorElements}
             markerBlendMode={markerBlendMode}
@@ -44,6 +46,7 @@ CustomAnimatedCursor.defaultProps = {
     lineDelay: 2,
     lineLength: 12,
     lineWidth: 2,
+    markerSize: 24,
     markerColor: "#fff",
     removeCursorElements: ["a", "input", "label", "select", "textarea", "button"],
     markerBlendMode: true,

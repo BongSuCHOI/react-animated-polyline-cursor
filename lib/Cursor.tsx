@@ -20,6 +20,7 @@ const Cursor = ({
     lineDelay,
     lineLength,
     lineWidth,
+    markerSize,
     markerColor,
     removeCursorElements,
     markerBlendMode,
@@ -141,6 +142,10 @@ const Cursor = ({
             circleElementRef.current.setAttribute("r", String(circleR));
         }
 
+        if (isHovered && markerElementRef.current) {
+            (markerElementRef.current.style as any).r = isClicked ? markerSize - 3 : markerSize;
+        }
+
         if (isClicked) {
             cancelAnimationFrame(requestRef.current);
         }
@@ -152,7 +157,7 @@ const Cursor = ({
             circleElementRef.current.style.opacity = isHovered ? "0" : "1";
             polylineElementRef.current.style.opacity = isHovered ? "0" : "1";
             markerElementRef.current.style.opacity = isHovered ? "1" : "0";
-            (markerElementRef.current.style as any).r = isHovered ? dotSize * 3 : 0;
+            (markerElementRef.current.style as any).r = isHovered ? markerSize : dotSize;
         }
     }, [isHovered]);
 
@@ -181,9 +186,6 @@ const Cursor = ({
                     ref={markerElementRef}
                     className="cursor-marker"
                     style={cursorStyle.markerCircle}
-                    cx="48"
-                    cy="48"
-                    r="48"
                 />
             </svg>
         </div>
