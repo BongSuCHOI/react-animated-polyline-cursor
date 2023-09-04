@@ -10,7 +10,7 @@
 
 1. [Features](#features)
 2. [Demo](#demo)
-3. [Start](#start)
+3. [Install](#Install)
 4. [Options](#options)
 5. [Notes](#notes)
 
@@ -18,66 +18,105 @@
 
 ## Features
 
--   기본 커서 대체 `circle`
--   `circle`가 이동했던 경로를 선을 그리며 따라오는 `polyline`
--   클릭시 `circle` scale 축소 효과
--   호버시 `marker` 노출 효과
+-   Custom cursor replaced by default cursor
+-   Line effects that track the path the cursor has traveled
+-   Cursor scale down effect on click
+-   Cursor resizing effect when hovering over elements with 'c-cursor-hover' class defined
 
-그 외에 `circle`, `polyline`, `marker`의 color, size, polyline-delay, polyline-length, marker-blend-mode 등 다양한 커스텀이 가능합니다.
-
-<br/>
-
-## Demo
+Other customizations include color, size, polyline-delay, polyline-length, marker-blend-mode, and more for `circle`, `polyline`, and `marker`.
 
 [Live Demo](https://bongsuchoi.github.io/react-animated-polyline-cursor/)
 
 <br/>
 
-## Start
-
-아직 npm 패키지 등록을 안해서 lib에 있는 파일/폴더들을 다운 혹은 카피 후 본인 프로젝트에 적용해서 사용해야 합니다.
-
-### 프로젝트에 적용
-
-전역 위치에 추가(`App.js`)
+## Install
 
 ```
+npm i react-animated-polyline-cursor
+```
+
+<br/>
+
+## Usage
+
+**Add to global scope. (ex. App.ts)**
+
+```jsx
 import React from "react";
 import CustomAnimatedCursor from "user project dir path";
 
 export default function App() {
-  return (
-    <div className="App">
-      <CustomAnimatedCursor />
-    </div>
-  );
+    return (
+        <div className="App">
+            // It has default values, ​​and you can only override custom settings.
+            <CustomAnimatedCursor
+                dotColor={"#2AFADF"}
+                lineColor={"#2AFADF"}
+                markerColor={"#2AFADF"}
+            />
+            ...component
+        </div>
+    );
 }
 ```
 
-### 사용 예시
+**Hover Element (add 'c-cursor-hover' className)**
 
+```jsx
+export default function DemoContent() {
+    return (
+        <div>
+            <div>
+                <h1>Custom Animated Polyline Cursor</h1>
+                <a href="#" className="c-cursor-hover">
+                    Link Text.
+                </a>
+                <div className="c-cursor-hover">Hover Box</div>
+                <div>
+                    <label htmlFor="chk" className="c-cursor-hover">
+                        Checkbox
+                    </label>
+                    <input type="checkbox" id="chk" />
+                </div>
+            </div>
+        </div>
+    );
+}
 ```
-import React from "react";
-import CustomAnimatedCursor from "user project dir path";
 
-export default function App() {
-  return (
-    <div className="App">
-      <CustomAnimatedCursor
-            dotColor={"#2AFADF"}
-            dotSize={8}
-            dotReductionRatio={0.25}
-            lineColor={"#2AFADF"}
-            lineDelay={2}
-            lineLength={12}
-            lineWidth={2}
-            markerColor={"#2AFADF"}
-            addRemoveCursor={".ex-video"}
-            markerBlendMode={true}
-        />
-        ...component
-    </div>
-  );
+### Default Props
+
+```ts
+CustomAnimatedCursor.defaultProps = {
+    dotColor: "#000",
+    dotSize: 8,
+    dotReductionRatio: 0.25,
+    lineColor: "#000",
+    lineDelay: 2,
+    lineLength: 12,
+    lineWidth: 2,
+    markerSize: 24,
+    markerColor: "#fff",
+    removeCursorElements: ["a", "input", "label", "select", "textarea", "button"],
+    markerBlendMode: true,
+};
+```
+
+### Props Types
+
+```ts
+export interface CursorTypes {
+    dotColor: string;
+    dotSize: number;
+    dotReductionRatio: number;
+    lineColor: string;
+    lineDelay: number;
+    lineLength: number;
+    lineWidth: number;
+    markerSize: number;
+    markerColor: string;
+    removeCursorElements: string[];
+    markerBlendMode: boolean;
 }
 ```
 
@@ -94,18 +133,21 @@ export default function App() {
 | `lineDelay`            | number  | DrawLine delay to follow - Minimum 1                    | `2`                                                       |
 | `lineLength`           | number  | DrawLine stretched length - Recommend 2~30 limit        | `12`                                                      |
 | `lineWidth`            | number  | DrawLine width - Minimum 1, Maximum "dotSize"           | `2`                                                       |
+| `markerSize`           | string  | HoveredMarker size - Minimum "dotSize"                  | `24`                                                      |
 | `markerColor`          | string  | HoveredMarker color - rgb or hex                        | `#000`                                                    |
 | `removeCursorElements` | array   | Remove default cursor from element - htmlTag, class, id | `['a', 'input', 'label', 'select', 'textarea', 'button']` |
-| `markerBlendMode`      | boolean | On/Off the hoveredMarker blend mode - boolean           | `true`                                                    |
+| `markerBlendMode`      | boolean | On/Off the Cursor blend mode - boolean                  | `true`                                                    |
 
 <br/>
 
 ## Todos
 
 -   ~~Webpack to Vite Migration~~
--   Add Hovered Marker Click Action
--   Add Input Type Element Hovered Action
--   Create & Deploy NPM Package
+-   ~~Add Hovered Marker Click Action~~
+-   ~~Add Input Type Element Hovered Action~~
+-   ~~Create & Deploy NPM Package~~
+-   Add more detailed cursor style editing
+-   Changed input element cursor hovered design
 -   Source Refactoring
 
 <br/>
