@@ -34,7 +34,7 @@ export default function DemoContent() {
                     </li>
                     <li>
                         <a href="#" className="c-cursor-hover">
-                            링크 텍스트입니다.
+                            링크 텍스트입니다. className="c-cursor-hover"
                         </a>
                     </li>
                     <li>
@@ -46,7 +46,10 @@ export default function DemoContent() {
                         <input type="text" placeholder="TEXT INPUT" />
                     </li>
                     <li>
-                        <input type="checkbox" />
+                        <label htmlFor="chk" className="c-cursor-hover">
+                            Checkbox
+                        </label>
+                        <input type="checkbox" id="chk" />
                     </li>
                     <li>
                         <select>
