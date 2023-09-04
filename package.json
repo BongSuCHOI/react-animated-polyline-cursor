@@ -1,23 +1,45 @@
 {
-    "name": "react-custom-animated-cursor",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "homepage": "https://github.com/BongSuCHOI/react-custom-animated-cursor",
+    "name": "react-animated-polyline-cursor",
+    "version": "1.0.2",
+    "description": "Custom animated(drawLine) cursor by react functional component.",
+    "main": "./dist/index.umd.cjs",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
     "type": "module",
+    "author": "Bongsu Choi <chlqhdtn98@gmail.com>",
+    "keywords": [
+        "cursor",
+        "react cursor",
+        "custom cursor",
+        "animated cursor",
+        "polyline cursor",
+        "drawLine cursor"
+    ],
+    "homepage": "https://bongsuchoi.github.io/react-animated-polyline-cursor/",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/BongSuCHOI/react-animated-polyline-cursor"
+    },
+    "bugs": {
+        "url": "https://github.com/BongSuCHOI/react-animated-polyline-cursor/issues"
+    },
+    "license": "MIT",
     "scripts": {
         "dev": "vite serve",
         "build": "vite build",
+        "build-deploy": "vite build --config vite.config-npm.ts",
         "preview": "vite preview"
     },
-    "author": "",
-    "license": "ISC",
     "devDependencies": {
         "@types/node": "^20.5.7",
         "@vitejs/plugin-react": "^4.0.4",
         "typescript": "^5.2.2",
         "typescript-plugin-css-modules": "^5.0.1",
         "vite": "^4.4.9",
+        "vite-plugin-dts": "^3.5.3",
         "vite-tsconfig-paths": "^4.2.0"
     },
     "dependencies": {
