@@ -9,10 +9,9 @@
 ## Contents
 
 1. [Features](#features)
-2. [Demo](#demo)
-3. [Install](#Install)
+2. [Install](#install)
+3. [Usage](#usage)
 4. [Options](#options)
-5. [Notes](#notes)
 
 <br/>
 
@@ -43,7 +42,7 @@ npm i react-animated-polyline-cursor
 
 ```jsx
 import React from "react";
-import CustomAnimatedCursor from "user project dir path";
+import CustomAnimatedCursor from "react-animated-polyline-cursor";
 
 export default function App() {
     return (
@@ -150,10 +149,3 @@ export interface CursorTypes {
 -   Changed input element cursor hovered design
 -   Add SSR Mode
 -   Source Refactoring
-
-<br/>
-
-## Notes
-
--   Vue로 구현되어있는 [DFY](https://www.dfy.co.kr/)의 커서를 React 버전으로 만들어보고 싶어서 제작하였습니다.
--   버그, 이슈, 리팩토링 등 다양한 피드백 환영합니다.
