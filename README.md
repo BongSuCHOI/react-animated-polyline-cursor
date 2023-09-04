@@ -148,6 +148,7 @@ export interface CursorTypes {
 -   ~~Create & Deploy NPM Package~~
 -   Add more detailed cursor style editing
 -   Changed input element cursor hovered design
+-   Add SSR Mode
 -   Source Refactoring
 
 <br/>

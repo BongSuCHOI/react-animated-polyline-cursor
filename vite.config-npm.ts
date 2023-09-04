@@ -8,7 +8,11 @@ export default defineConfig({
     plugins: [
         react(),
         tsconfigPaths(),
-        dts({ rollupTypes: true, compilerOptions: { outDir: "./dist" } }),
+        dts({
+            compilerOptions: { outDir: "./dist" },
+            rollupTypes: true,
+            include: ["./lib/", "globals.d.ts"],
+        }),
     ],
     base: "./",
     build: {
@@ -16,9 +20,15 @@ export default defineConfig({
         lib: {
             entry: resolve(__dirname, "lib"),
             name: "ReactAnimatedPolylineCursor",
+            fileName: "index",
         },
         rollupOptions: {
             external: ["react"],
+            output: {
+                globals: {
+                    react: "React",
+                },
+            },
         },
     },
     resolve: {
