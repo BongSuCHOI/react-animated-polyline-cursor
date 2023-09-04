@@ -1,6 +1,6 @@
 {
     "name": "react-animated-polyline-cursor",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Custom animated(drawLine) cursor by react functional component.",
     "main": "./dist/index.umd.cjs",
     "module": "./dist/index.js",
@@ -9,7 +9,7 @@
         "dist"
     ],
     "type": "module",
-    "author": "Bongsu Choi <chlqhdtn98@gmail.com>",
+    "author": "Bongsu Choi",
     "keywords": [
         "cursor",
         "react cursor",
